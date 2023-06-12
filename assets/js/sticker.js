@@ -106,7 +106,7 @@
               // just reached bottom || just started to stick but bottom is already reached
               s.stickyElement.trigger('sticky-bottom-reached', [s]);
             } else if(s.currentTop !== null && newTop === s.topSpacing && s.currentTop < newTop) {
-              // sticky is started && sticked at topSpacing && overflowing from top just finished
+              // sticky is started && sticked at topSpacing && overflOwings from top just finished
               s.stickyElement.trigger('sticky-bottom-unreached', [s]);
             }
 

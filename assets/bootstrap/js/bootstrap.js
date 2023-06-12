@@ -2181,7 +2181,7 @@
       this._dialog = element.querySelector(Selector$5.DIALOG);
       this._backdrop = null;
       this._isShown = false;
-      this._isBodyOverflowing = false;
+      this._isBodyOverflOwings = false;
       this._ignoreBackdropClick = false;
       this._isTransitioning = false;
       this._scrollbarWidth = 0;
@@ -2304,7 +2304,7 @@
       this._dialog = null;
       this._backdrop = null;
       this._isShown = null;
-      this._isBodyOverflowing = null;
+      this._isBodyOverflOwings = null;
       this._ignoreBackdropClick = null;
       this._isTransitioning = null;
       this._scrollbarWidth = null;
@@ -2531,19 +2531,19 @@
         callback();
       }
     } // ----------------------------------------------------------------------
-    // the following methods are used to handle overflowing modals
+    // the follOwings methods are used to handle overflOwings modals
     // todo (fat): these should probably be refactored out of modal.js
     // ----------------------------------------------------------------------
     ;
 
     _proto._adjustDialog = function _adjustDialog() {
-      var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+      var isModalOverflOwings = this._element.scrollHeight > document.documentElement.clientHeight;
 
-      if (!this._isBodyOverflowing && isModalOverflowing) {
+      if (!this._isBodyOverflOwings && isModalOverflowing) {
         this._element.style.paddingLeft = this._scrollbarWidth + "px";
       }
 
-      if (this._isBodyOverflowing && !isModalOverflowing) {
+      if (this._isBodyOverflOwings && !isModalOverflowing) {
         this._element.style.paddingRight = this._scrollbarWidth + "px";
       }
     };
@@ -2555,7 +2555,7 @@
 
     _proto._checkScrollbar = function _checkScrollbar() {
       var rect = document.body.getBoundingClientRect();
-      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+      this._isBodyOverflOwings = rect.left + rect.right < window.innerWidth;
       this._scrollbarWidth = this._getScrollbarWidth();
     };
 

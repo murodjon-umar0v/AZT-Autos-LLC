@@ -1587,7 +1587,7 @@
    * in the Software without restriction, including without limitation the rights
    * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
    * copies of the Software, and to permit persons to whom the Software is
-   * furnished to do so, subject to the following conditions:
+   * furnished to do so, subject to the follOwings conditions:
    *
    * The above copyright notice and this permission notice shall be included in all
    * copies or substantial portions of the Software.
@@ -2889,7 +2889,7 @@
     // now, let's make a step back and look at this code closely (wtf?)
     // If the content of the popper grows once it's been positioned, it
     // may happen that the popper gets misplaced because of the new content
-    // overflowing its reference element
+    // overflOwings its reference element
     // To avoid this problem, we provide two options (x and y), which allow
     // the consumer to define the offset origin.
     // If we position a popper on top of a reference element, we can set
@@ -3640,7 +3640,7 @@
     /**
      * The `offset` modifier can shift your popper on both its axis.
      *
-     * It accepts the following units:
+     * It accepts the follOwings units:
      * - `px` or unit-less, interpreted as pixels
      * - `%` or `%r`, percentage relative to the length of the reference element
      * - `%p`, percentage relative to the length of the popper element
@@ -3714,7 +3714,7 @@
       fn: preventOverflow,
       /**
        * @prop {Array} [priority=['left','right','top','bottom']]
-       * Popper will try to prevent overflow following these priorities by default,
+       * Popper will try to prevent overflow follOwings these priorities by default,
        * then, it could overflow on the left and on top of the `boundariesElement`
        */
       priority: ['left', 'right', 'top', 'bottom'],
@@ -4794,7 +4794,7 @@
       this._dialog = element.querySelector(Selector$5.DIALOG);
       this._backdrop = null;
       this._isShown = false;
-      this._isBodyOverflowing = false;
+      this._isBodyOverflOwings = false;
       this._ignoreBackdropClick = false;
       this._isTransitioning = false;
       this._scrollbarWidth = 0;
@@ -4917,7 +4917,7 @@
       this._dialog = null;
       this._backdrop = null;
       this._isShown = null;
-      this._isBodyOverflowing = null;
+      this._isBodyOverflOwings = null;
       this._ignoreBackdropClick = null;
       this._isTransitioning = null;
       this._scrollbarWidth = null;
@@ -5144,19 +5144,19 @@
         callback();
       }
     } // ----------------------------------------------------------------------
-    // the following methods are used to handle overflowing modals
+    // the follOwings methods are used to handle overflOwings modals
     // todo (fat): these should probably be refactored out of modal.js
     // ----------------------------------------------------------------------
     ;
 
     _proto._adjustDialog = function _adjustDialog() {
-      var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
+      var isModalOverflOwings = this._element.scrollHeight > document.documentElement.clientHeight;
 
-      if (!this._isBodyOverflowing && isModalOverflowing) {
+      if (!this._isBodyOverflOwings && isModalOverflowing) {
         this._element.style.paddingLeft = this._scrollbarWidth + "px";
       }
 
-      if (this._isBodyOverflowing && !isModalOverflowing) {
+      if (this._isBodyOverflOwings && !isModalOverflowing) {
         this._element.style.paddingRight = this._scrollbarWidth + "px";
       }
     };
@@ -5168,7 +5168,7 @@
 
     _proto._checkScrollbar = function _checkScrollbar() {
       var rect = document.body.getBoundingClientRect();
-      this._isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+      this._isBodyOverflOwings = rect.left + rect.right < window.innerWidth;
       this._scrollbarWidth = this._getScrollbarWidth();
     };
 
